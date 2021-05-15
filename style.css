@@ -90,6 +90,9 @@ header .container a svg{
   margin-right: 2.5rem;
   margin-left: 0.5rem;
 }
+header .container a:hover svg{
+  animation: 0.3s rotator ease infinite;
+}
 header .container a:nth-child(4){
   display: flex;
   width: 10rem;
@@ -166,29 +169,30 @@ nav ul li a:hover:after{
 }
 #about .container h2::after{
   content: " ";
-  width: 35%;
-  height: 50%;
+  width: 0;
+  height: 5px;
   position: absolute;
   right: 0;
+  bottom: 0;
   background-color: #14a76c;
-  animation: widhter_right 2s ease infinite;
+  animation: widhter_left 2s ease infinite;
 }
 #about .container h2::before{
   content: " ";
   width: 0%;
   left: 0;
-  height: 50%;
+  height: 5px;
   position: absolute;
   background-color: #14a76c;
   animation: widhter_left 2s ease infinite;
 }
 @keyframes widhter_left{
   0%{width: 0%;}
-  50%{width: 35%;}
+  50%{width: 100%;}
   75%{width: 0%;}
 }
 @keyframes widhter_right{
-  0%{width: 35%;}
+  0%{width: 100%;}
   50%{width: 0%;}
-  75%{width: 35%;}
+  75%{width: 100%;}
 }
