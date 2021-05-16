@@ -99,7 +99,7 @@ header .container h1::after{
   position: absolute;
   top: 0;
   left: 0;
-  border: 10px double var(--red);
+  border: 10px double var(--green);
   height: 100%;
   width: 100%;
 }
@@ -142,7 +142,7 @@ header .container a:nth-child(4){
   display: none;
 }
 @keyframes bigger{
-  0%{border: 10px double var(--red);}
+  0%{border: 10px double var(--green);}
   75%{border: 20px double wheat;}
 }
 @keyframes rotator{
