@@ -162,9 +162,16 @@ nav ul li a:hover:after{
   }
 }
 #about .container h2{
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
   text-align: center;
+  position: relative;
+  padding: 1rem;
+}
+#about .container:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   position: relative;
 }
 #about .container h2::after{
@@ -177,14 +184,38 @@ nav ul li a:hover:after{
   background-color: #14a76c;
   animation: widhter_left 2s ease infinite;
 }
+#about .container:nth-child(1) > p{
+  align-self: flex-end;
+  width: 50%;
+}
 #about .container h2::before{
   content: " ";
   width: 0%;
   left: 0;
+  top: 0;
   height: 5px;
   position: absolute;
   background-color: #14a76c;
   animation: widhter_left 2s ease infinite;
+}
+#about .container:nth-child(1) blockquote{
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: black;
+  font-weight: 800;
+  background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+}
+blockquote a{
+  color: var(--red);
+}
+#about .container p{
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 @keyframes widhter_left{
   0%{width: 0%;}
@@ -195,4 +226,18 @@ nav ul li a:hover:after{
   0%{width: 100%;}
   50%{width: 0%;}
   75%{width: 100%;}
+}
+@media (max-width:634px){
+  #about .container:nth-child(1) blockquote{
+    position: unset;
+    transform: unset;
+    top: unset;
+    left: unset;
+    width: fit-content;
+  }
+  #about .container:nth-child(1) > p{
+    align-self: center;
+    width: fit-content;
+  }
+    
 }
