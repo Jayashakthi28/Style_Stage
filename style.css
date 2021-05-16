@@ -56,8 +56,6 @@ header{
 header::after{
   content: " ";
   position: absolute;
-  top:-8%;
-  left: -5%;
   height: 25vw;
   width: 25vw;
   border-radius: 25vw;
@@ -67,13 +65,33 @@ header::after{
 header::before{
   content: " ";
   position: absolute;
-  bottom:-8%;
-  right: -5%;
   height: 25vw;
   width: 25vw;
   border-radius: 25vw;
   background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
   animation: mover1 20s ease infinite;
+}
+@keyframes mover{
+  0%{top:-8%;
+    left:0%}
+  25%{top:25%;
+      left:25%;}
+  50%{top:75%;
+      left:0%}
+  75%{left:25%;}
+  100%{top:-8%;
+        left: 0%;}
+}
+@keyframes mover1{
+  0%{bottom:-8%;
+    right: 0%;}
+  25%{bottom:25%;
+      right: 25%;}
+  50%{bottom:75%;
+      right: 0%;}
+  75%{right: 25%;}
+  100%{bottom:-8%;
+      right:0%}
 }
 @media (max-width:594px){
   header::after{
@@ -269,18 +287,6 @@ blockquote a{
   0%{width: 100%;}
   50%{width: 0%;}
   75%{width: 100%;}
-}
-@keyframes mover{
-  0%{top:-8%}
-  25%{top:25%}
-  50%{top:75%}
-  100%{top:-8%}
-}
-@keyframes mover1{
-  0%{bottom:-8%}
-  25%{bottom:25%}
-  50%{bottom:75%}
-  100%{bottom:-8%}
 }
 @media (max-width:634px){
   #about .container:nth-child(1) blockquote{
