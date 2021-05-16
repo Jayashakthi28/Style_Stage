@@ -42,11 +42,45 @@ body {
 header{
   height: fit-content;
   text-align: center;
-  background-image: radial-gradient(var(--black) 15%, transparent 20%);
+  /* background-image: radial-gradient(var(--green) 15%, transparent 20%); */
   /* radial-gradient(#fafafa 20%, transparent 20%); */
-  background-color: var(--green);
-  background-position: 0 0, 50px 50px;
-  background-size: 50px 50px;
+  background-color: var(--black);
+  /* background-position: 0 0, 50px 50px;
+  background-size: 50px 50px; */
+  position: relative;
+  overflow: hidden;
+}
+header::after{
+  content: " ";
+  position: absolute;
+  top:-8%;
+  left: -5%;
+  height: 25%;
+  width: 25%;
+  border-radius: 500px;
+  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+}
+header::before{
+  content: " ";
+  position: absolute;
+  bottom:-8%;
+  right: -5%;
+  height: 25%;
+  width: 25%;
+  border-radius: 500px;
+  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+}
+@media (max-width:594px){
+  header::after{
+    height: 25%;
+    width: 20vw;
+    border-radius: 20vw;
+  }
+  header::before{
+    height: 25%;
+    width: 20vw;
+    border-radius: 20vw;
+  }
 }
 header .container{
   display: flex;
