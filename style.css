@@ -49,7 +49,7 @@ header{
   background-size: 50px 50px; */
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -148,8 +148,16 @@ header .container a svg{
   margin-right: 2.5rem;
   margin-left: 0.5rem;
 }
+header .container a:nth-child(4):hover{
+  background-color: black;
+  color: #7579ff;
+  border: 2px solid #7579ff;
+}
 header .container a:hover svg{
   animation: 0.3s rotator ease infinite;
+}
+header .container a:hover svg path{
+    fill: #7579ff;
 }
 header .container a:nth-child(4){
   display: flex;
@@ -157,10 +165,10 @@ header .container a:nth-child(4){
   height: 5rem;
   text-align: center;
   padding-top: 1.5rem;
-  color:black;
+  color: black;
   font-weight: bolder;
   border-radius: 1.5rem;
-  background-color: wheat;
+  background-color: #7579ff;
 }
 .skip-link{
   display: none;
@@ -234,16 +242,18 @@ nav ul li a:hover:after{
   flex-direction: column;
   justify-content: space-evenly;
   position: relative;
+  min-height: 100vh;
 }
 #about .container h2::after{
   content: " ";
-  width: 0;
+  width: 25%;
   height: 5px;
   position: absolute;
   right: 0;
   bottom: 0;
   background-color: #14a76c;
-  animation: widhter_left 2s ease infinite;
+  border-radius: 5px 0 0 5px;
+  /* animation: widhter_left 2s ease infinite; */
 }
 #about .container:nth-child(1) > p{
   align-self: flex-end;
@@ -251,13 +261,20 @@ nav ul li a:hover:after{
 }
 #about .container h2::before{
   content: " ";
-  width: 0%;
+  width: 25%;
   left: 0;
   top: 0;
   height: 5px;
   position: absolute;
   background-color: #14a76c;
-  animation: widhter_left 2s ease infinite;
+  border-radius: 0 5px 5px 0;
+  /* animation: widhter_left 2s ease infinite; */
+}
+#about .container:hover h2::after{
+  animation: widhter_left 10s ease infinite;
+}
+#about .container:hover h2::before{
+  animation: widhter_left 10s ease infinite;
 }
 #about .container:nth-child(1) blockquote{
   width: 40%;
@@ -271,21 +288,25 @@ nav ul li a:hover:after{
   font-weight: 800;
   background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
 }
+#about .container{
+  min-height: 100vh;
+}
 blockquote a{
   color: var(--red);
 }
 #about .container p{
   font-size: 1.5rem;
   line-height: 2.5rem;
+  padding: 1rem;
 }
 @keyframes widhter_left{
-  0%{width: 0%;}
+  0%{width: 25%;}
   50%{width: 100%;}
-  75%{width: 0%;}
+  75%{width: 25%;}
 }
 @keyframes widhter_right{
   0%{width: 100%;}
-  50%{width: 0%;}
+  50%{width: 25%;}
   75%{width: 100%;}
 }
 @media (max-width:634px){
@@ -301,4 +322,28 @@ blockquote a{
     width: fit-content;
   }
     
+}
+#about .container ul{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+}
+#about .container ul li{
+  list-style-type: none;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.8rem;
+  width: 300px;
+  background-color: black;
+  border-radius: 10px;
+  border: 4px solid #7579ff;
+  cursor: pointer;
+}
+#about .container ul li:hover{
+  color: #7579ff;
+  border: 4px solid black;
+  
 }
