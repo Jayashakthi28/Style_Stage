@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 :root{
-  --black:#272727;
+  --black:#000000;
   --gray:#747474;
   --red:#ff652f;
   --yellow:#ffe400;
-  --green:#14a76c;
+  --green:#00ff99;
   --blue:#002f47;
 }
 body,
@@ -344,6 +344,6 @@ blockquote a{
 }
 #about .container ul li:hover{
   color: #7579ff;
-  border: 4px solid black;
+  border: 4px solid #acaeff;
   
 }
