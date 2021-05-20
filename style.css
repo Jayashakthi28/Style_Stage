@@ -365,3 +365,122 @@ blockquote a{
   color: #7579ff;
   border: transparent;
 }
+#guidelines{
+  min-height: 100vh;
+}
+#guidelines h2{
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#guidelines h2::before{
+  width: 200px;
+  content: ' ';
+  height: 5px;
+  background-color: #7579ff;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  border-radius: 5px;
+}
+#guidelines h2::after{
+  width: 200px;
+  content: ' ';
+  height: 5px;
+  background-color: #7579ff;
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+  border-radius: 5px;
+}
+#guidelines .container{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+#guidelines .container p{
+  margin: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  box-shadow: rgba(109, 56, 255, 0.1) 0px 8px 24px, rgba(109, 56, 255, 0.1) 0px 16px 56px, rgba(109, 56, 255, 0.1) 0px 24px 80px;
+  box-shadow: rgba(109, 56, 255, 1) 0px 2px 5px -1px, rgba(69, 2, 255, 1) 0px 1px 3px -1px;
+  background-color: rgb(22, 22, 22);
+}
+#guidelines .container h3{
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  width: 150px;
+  cursor: pointer;
+}
+#guidelines .container h3::before{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #7579ff;
+  border-right: 30px solid transparent;
+}
+#guidelines .container h3::after{
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid #5f64ff;
+  border-left: 30px solid transparent;
+  visibility: hidden;
+}
+#guidelines .container h3:hover::after{
+  visibility: visible;
+}
+#guidelines .container > a{
+  margin: 1rem auto;
+  text-align: center; 
+  font-size: 1.5rem;
+  height: 30px;
+  position: relative;
+  width: 300px; 
+}
+#guidelines .container > a::before{
+  position: absolute;
+  content: ' ';
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 20px solid #7579ff;
+  visibility: hidden;
+  border-bottom: 10px solid transparent;
+}
+#guidelines .container > a::after{
+  position: absolute;
+  content: ' ';
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #7579ff;
+  visibility: hidden;
+  border-bottom: 10px solid transparent;
+}
+#guidelines .container > a:hover:after{
+  visibility: visible;
+}
+#guidelines .container > a:hover::before{
+  visibility: visible;
+}
