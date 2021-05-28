@@ -97,29 +97,35 @@ header::before{
   height: 25vw;
   width: 25vw;
   border-radius: 25vw;
-  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+  background-image: linear-gradient(to bottom, #b224ef 0%, #7579ff 100%);
   animation: mover1 20s ease infinite;
 }
 @keyframes mover{
   0%{top:-8%;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
     left:0%}
   25%{top:25%;
       left:25%;}
   50%{top:75%;
+    background-image: linear-gradient(to bottom, #b224ef 0%, #7579ff 100%);
       left:0%}
   75%{left:25%;}
   100%{top:-8%;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
         left: 0%;}
 }
 @keyframes mover1{
   0%{bottom:-8%;
+    background-image: linear-gradient(to bottom, #b224ef 0%, #7579ff 100%);
     right: 0%;}
   25%{bottom:25%;
       right: 25%;}
   50%{bottom:75%;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
       right: 0%;}
   75%{right: 25%;}
   100%{bottom:-8%;
+    background-image: linear-gradient(to bottom, #b224ef 0%, #7579ff 100%);
       right:0%}
 }
 @media (max-width:594px){
