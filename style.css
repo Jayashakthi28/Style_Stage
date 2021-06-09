@@ -226,6 +226,9 @@ header .container a:nth-child(4) svg{
 .skip-link{
   display: none;
 }
+.skip-link:focus{
+  display: block;
+}
 @keyframes bigger{
   0%{border: 10px double var(--green);}
   75%{border: 20px double wheat;}
@@ -346,6 +349,7 @@ nav ul li a:hover:after{
 }
 blockquote a{
   color: var(--red);
+  text-decoration: underline;
 }
 #about .container p{
   font-size: 1.5rem;
@@ -593,6 +597,7 @@ blockquote a{
 }
 #contribute .container:nth-child(2) a{
   color: var(--red);
+  text-decoration: underline;
 }
 #contribute .container:nth-child(2) ol{
   font-size: 1.5rem;
@@ -726,4 +731,12 @@ aside .container a{
 }
 .page-footer .container ul li:hover{
   background-color: black;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
