@@ -223,11 +223,24 @@ header .container a:nth-child(4) svg{
   height: 35px;
   width: 35px;
 }
-.skip-link{
-  display: none;
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
 }
-.skip-link:focus{
-  display: block;
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
 }
 @keyframes bigger{
   0%{border: 10px double var(--green);}
@@ -348,7 +361,7 @@ nav ul li a:hover:after{
   min-height: 100vh;
 }
 blockquote a{
-  color: var(--red);
+  color: rgb(5, 50, 255);
   text-decoration: underline;
 }
 #about .container p{
@@ -596,7 +609,7 @@ blockquote a{
   color: black;
 }
 #contribute .container:nth-child(2) a{
-  color: var(--red);
+  color: rgb(0, 0, 150);
   text-decoration: underline;
 }
 #contribute .container:nth-child(2) ol{
@@ -734,6 +747,18 @@ aside .container a{
 }
 @media (prefers-reduced-motion: reduce) {
   * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  *::before{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  *::after{
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
