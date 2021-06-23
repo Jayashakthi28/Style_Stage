@@ -225,22 +225,17 @@ header .container a:nth-child(4) svg{
 }
 .skip-link {
   position: absolute;
-  top: auto;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  background-color: var(--color-secondary);
+  top: 0px;
+  left: 0;
+  width: fit-content;
+  background-color: black;
   color: #fff;
   font-size: 1.125rem;
   overflow: hidden;
+  border-radius: 0.1rem;
 }
-.skip-link:focus {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  padding: 0.5em;
+.skip-link:focus{
+  z-index: 999;
 }
 @keyframes bigger{
   0%{border: 10px double var(--green);}
